@@ -1,0 +1,43 @@
+scheduler:
+  run_time: "10:00"
+vpn:
+  process_name: "ClashX Pro"
+  launch_command: ["open", "-a", "ClashX Pro"]
+notifications:
+  email:
+    enabled: true
+    to: "you@example.com"
+    smtp_profile: "qq_mail"
+  shortcut:
+    enabled: true
+    name: "Daily News Digest"
+  error_section: true
+storage:
+  base_dir: "~/.local/share/news_agent"
+sources:
+  - id: "smol_ai"
+    type: "smol_ai_issues"
+    active: true
+    base_url: "https://news.smol.ai/issues"
+  - id: "anthropic_blog"
+    type: "html_scrape"
+    active: true
+    url: "https://www.anthropic.com/engineering"
+    selector: ".blog-card a"
+  - id: "openai_stories"
+    type: "html_scrape"
+    active: true
+    url: "https://openai.com/stories/"
+    selector: "article a"
+  - id: "thinking_machines_blog"
+    type: "html_scrape"
+    active: true
+    url: "https://thinkingmachines.ai/blog/"
+    selector: ".post-preview a"
+  - id: "x_username"
+    type: "x_api"
+    active: true
+    handle: "example"
+    max_results: 10
+secrets:
+  keychain_service_prefix: "news_agent"

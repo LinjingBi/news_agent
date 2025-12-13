@@ -1,0 +1,7 @@
+2024-10-23T10:00:01-07:00 [Fetch][smol_ai] Started polling latest issues
+2024-10-23T10:00:05-07:00 [Debug][http] GET https://news.smol.ai/issues 200 412ms
+2024-10-23T10:00:06-07:00 [Fetch][smol_ai] Found 2 new items
+2024-10-23T10:00:06-07:00 [Snapshot] Daily dump saved to 2024-10-23T10-00-06.md
+2024-10-23T10:00:07-07:00 [Notification][email] Delivered report to you@example.com
+2024-10-23T10:00:07-07:00 [Notification][shortcut] shortcuts run "Daily News Digest" exit code 1
+2024-10-23T10:00:07-07:00 [Error][shortcut] Failed to deliver via Shortcuts: shortcuts run returned status 1

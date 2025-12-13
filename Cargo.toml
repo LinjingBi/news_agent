@@ -1,0 +1,10 @@
+[package]
+name = "news_agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+chromiumoxide = { version = "0.5", features = ["tokio-runtime"] }
+futures-util = "0.3"
+tokio = { version = "1", features = ["full"] }
