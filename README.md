@@ -103,11 +103,12 @@ news-agent notify
 ```
 src/
   chrome/              # Chrome DevTools client
+  cli/                 # Subcommands
+  config/              # Cli config, now all in config.rs
   sources/             # Per-source HTML scrapers
   summarize/           # LLM clients
   notify/              # Email / macOS notifications
-  state/               # State models & IO
-  config/              # Config models & IO
+  state/               # State models & IO for sources latest state. now all in state.rs
 
 sample/
   config.yaml
