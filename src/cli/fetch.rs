@@ -13,6 +13,9 @@ pub async fn run() -> Result<()> {
     let mut state = State::load().context("Failed to load state")?;
 
     // Connect to Chrome
+    ChromeClient::launch_manual_devtools_session()
+    .await
+    .context("Failed to launch Chrome DevTools by command.")?;
     let chrome = ChromeClient::connect(9222)
         .await
         .context("Failed to connect to Chrome DevTools. Make sure Chrome is running with --remote-debugging-port=9222")?;
